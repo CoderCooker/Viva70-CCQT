@@ -1,0 +1,152 @@
+{
+  "name": "viva70-testbed-1",
+  "nimbusPodInfo": true,
+  "esx": [
+    {
+      "name": "esx.1",
+      "style": "fullInstall",
+      "cpus": 8,
+      "memory": 80000,
+      "ssd": [
+        400000000
+      ],
+      "disk": [
+        1000000,
+        400000000,
+        400000000,
+        400000000
+      ],
+      "username": "root",
+      "password": "ca$hc0w",
+      "freeLocalLuns": 3,
+      "nics": 2,
+      "nicType": "vmxnet3",
+      "network": [
+        "public",
+        "public"
+      ],
+      "ip": "10.0.0.100",
+      "netmask": "255.255.252.0",
+      "defaultGateway": "10.0.0.1",
+      "postDeploy": null
+    },
+    {
+      "name": "esx.2",
+      "style": "fullInstall",
+      "cpus": 8,
+      "memory": 64000,
+      "ssd": [
+        400000000
+      ],
+      "disk": [
+        1000000,
+        400000000,
+        400000000,
+        400000000
+      ],
+      "username": "root",
+      "password": "ca$hc0w",
+      "freeLocalLuns": 3,
+      "nics": 2,
+      "nicType": "vmxnet3",
+      "network": [
+        "public",
+        "public"
+      ],
+      "ip": "10.0.0.101",
+      "netmask": "255.255.252.0",
+      "defaultGateway": "10.0.0.1",
+      "postDeploy": null
+    },
+    {
+      "name": "esx.3",
+      "style": "fullInstall",
+      "cpus": 8,
+      "memory": 64000,
+      "ssd": [
+        400000000
+      ],
+      "disk": [
+        1000000,
+        400000000,
+        400000000,
+        400000000
+      ],
+      "username": "root",
+      "password": "ca$hc0w",
+      "freeLocalLuns": 3,
+      "nics": 2,
+      "nicType": "vmxnet3",
+      "network": [
+        "public",
+        "public"
+      ],
+      "ip": "10.0.0.102",
+      "netmask": "255.255.252.0",
+      "defaultGateway": "10.0.0.1",
+      "postDeploy": null
+    }
+  ],
+  "version": 3,
+  "isolatedNetworkOptions": {
+    "networkPrefix": "10.0.0.1/22",
+    "dhcpAddressStart": [
+      957
+    ],
+    "maxDhcpAddresses": [
+      64
+    ]
+  },
+  "genericVM": [
+    {
+      "type": "vcf-win-jenkins",
+      "name": "winjump",
+      "password": "VMware123!",
+      "nics": 10,
+      "network": [
+        "public",
+        "public",
+        "force_public",
+        "public",
+        "public",
+        "public",
+        "public",
+        "public",
+        "public",
+        "public"
+      ],
+      "postDeploy": null
+    },
+    {
+      "type": "vcf-ems-centos",
+      "name": "centos",
+      "nics": 2,
+      "password": "root123",
+      "network": [
+        "force_public",
+        "public"
+      ],
+      "postDeploy": null
+    }
+  ],
+  "ovfVm": [
+    {
+      "name": "cloud-builder",
+      "nics": 1,
+      "ovfUrl": "http://buildweb.eng.vmware.com/ob/api/12612377/deliverable/?file=publish/cloud-builder/exports/ovf/VMware-Cloud-Builder-2.0.0.0-12612377_OVF10.ovf",
+      "userName": "admin",
+      "password": "VMware123!",
+      "network": [
+        "public"
+      ],
+      "props": [
+        "guestinfo.ip0=10.0.0.215",
+        "guestinfo.ROOT_PASSWORD=VMware123!",
+        "guestinfo.ADMIN_PASSWORD=VMware123!",
+        "guestinfo.sku=vvd"
+      ],
+      "gateway": "10.0.0.250",
+      "postDeploy": null
+    }
+  ]
+}

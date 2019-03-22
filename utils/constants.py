@@ -1,0 +1,46 @@
+#!/usr/bin/python
+# constants.py
+'''
+@author: Jimin Hu
+'''
+SSH_KEYSCAN_COMMAND = "ssh-keyscan -4 -t rsa"
+AGENT_DEFAULT_ROOT = "root"
+AGENT_ROOT_PWD = "vmware"
+AGENT_KNOWN_HOSTS_FILE_NAME = "/home/administrator/.ssh/known_hosts"
+AGENT_RUN_LIST_LOC = "/vmware/input/runlist.json"
+AGENT_EXE_RES = "/vmware/logs/results/"
+AGENT_EXE_RES_JSON = "results-summary.json"
+AGENT_RES_JSON_LOC = "."
+AGENT_OVA_PATH = "https://s3-us-west-2.amazonaws.com/vmc-cpbu-eco/JenkinsProject/agent/server/base-agent-online-4.0-782329-777004-AUM-1.0.ova"
+AGENT_RUNLIST = "runlist.json"
+
+SERVER_TESTBED_LOC = "/dbc/sc-dbc1213/hjimin/viva70platform/testbed/three-hosts-lin-jump.json"
+LOG_DIR = "/dbc/sc-dbc1213/hjimin/viva70platform/logs"
+SERVER_TESTBED_INFO = "testbedInfo.json"
+TESTBED_DEPLOYMENT_BASECMD = "/mts/git/bin/nimbus-testbeddeploy --isolated-testbed --lease 1 --keepVMsOnFailure --context nsx --no-reservation --sku vvd "
+LIN_JUMP_USR = "root"
+LIN_JUMP_PWD = "ca$hc0w"
+#LIN_JUMP_PWD = "root123"
+LIN_JUMP_KNOWN_HOSTS = "/root/.ssh/known_hosts"
+LIN_JUMP_RUNLIST_LOC = "/root/runlist.json"
+DEFAULT_RUN_NAME = "viva_cert_quality"
+
+AGENT_HOST_IP = "10.0.0.100"
+AGENT_HOST_USR = "root"
+AGENT_HOST_PWD = "ca%24hc0w"
+AGENT_NETWORK = "VM Network"
+AGENT_DATASTORE = "local-0"
+AGENT_VM_NAME = "viva_cert_agent"
+AGENT_VM_NAME = "viva_cert_agent-3"
+CERT_HOST_1 = "10.0.0.101"
+CERT_HOSTS_USR = "root"
+#CERT_HOSTS_PWD = "Admin!23"
+CERT_HOSTS_PWD = "ca$hc0w"
+CERT_HOST_2 = "10.0.0.102"
+VIVA_SETUP = "viva_setup.json"
+# SSH_KEYSCAN_ECDSA_KEY = "ssh-keyscan -4 -t ecdsa"
+#
+# ROOT_USER_SSH_RSA_PUB_KEY_FILE_NAME="/root/.ssh/id_rsa.pub"
+# ROOT_USER_SSH_AUTHORIZED_KEYS_FILE_NAME="/root/.ssh/authorized_keys"
+# ROOT_USER_SSH_RSA_PUB_KEY_FILE_TMP_PATH = "/root/id_rsa.pub"
+# VRACK_USR_KNOWN_HOSTS_FILE="/home/vrack/.ssh/known_hosts"
