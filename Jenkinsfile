@@ -14,7 +14,6 @@ stages{
     stage('Example') {
     steps {
       echo "Hello world"
-      echo "Diff Hello world"
       echo "trying ${params.AAA}"
         }
 }
