@@ -1,21 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Deploy Build to ESX') {
-      parallel {
-        stage('Deploy Build to ESX') {
-          steps {
-            sh '''echo \'Deploying ESX\'
-sh \'python part1/deploy_esx.py\''''
-          }
-        }
-        stage('Deploy VCSA') {
-          steps {
-            sh '''echo \'Deploying VCSA\'
-sh \'python part1/deploy_vcsa.py\''''
-          }
-        }
-      }
+    parameters {
+    booleanParam(
+    name:"AAA",
+    defaultValue:true,
+    description: "CheckBox parameter")
+    String(
+    name:"BBBB",
+    defaultValue:"Need a Path",
+    description: "Want to dance")
     }
+    stage('Example') {
+      echo "Hello world"
+      echo "Diff Hello world"
+      echo "trying ${params.AAA}"
+        }
+        
   }
 }
